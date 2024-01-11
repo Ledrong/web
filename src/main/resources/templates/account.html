@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Page</title>
+    <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="main-logo">
+
+<div class="bg-shadow">
+
+<div class="container orange-bg">
+
+<h1 class="title-style main-title">Личный кабинет</h1>
+<h2 class="title-style">Информация о пользователе</h2>
+<form class="default-text default-form" th:action="@{/account/updateInfo}" method="post"
+      th:object="${updatedUser}">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" th:field="${updatedUser.name}" th:value="${responseData.user.name}" required />
+
+    <label for="surname">Фамилия:</label>
+    <input type="text" id="surname" name="surname" th:field="${updatedUser.surname}" th:value="${responseData.user.surname}" required />
+
+    <label for="lastname">Отчество:</label>
+    <input type="text" id="lastname" name="lastname" th:field="${updatedUser.lastname}" th:value="${responseData.user.lastname}" required />
+
+    <label for="address">Адрес:</label>
+    <input type="text" id="address" name="address" th:field="${updatedUser.address}" th:value="${responseData.user.address}" required />
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" th:field="${updatedUser.email}" th:value="${responseData.user.email}" required />
+    <br>
+    <button class="default-button default-text" type="submit">Обновить данные</button>
+</form>
+
+<h2 class="title-style">История заказов</h2>
+<div class="default-text history-container" th:if="${responseData.orders.isEmpty()}" >Здесь будут отображаться заказы!</div>
+<div class="default-text history-container" th:if="${!responseData.orders.isEmpty()}">
+    <div th:each="order: ${responseData.orders}">
+        <p>Заказ <span th:text="${order.id}"></span></p>
+        <p>Дата создания: <span th:text="${order.dateCreate}"></span></p>
+        <p>Дата доставки: <span th:text="${order.dateExpiry}"></span></p>
+        <p>Адрес доставки: <span th:text="${order.addressToSend}"></span></p>
+        <p>Дополнительное описание: <span th:text="${order.description}"></span></p>
+        <p>Статус: <span th:text="${order.statusCode.statusName}"></span></p>
+    </div>
+</div>
+
+<button class="default-button default-text"><a th:href="@{/index}">Вернуться на главную страницу</a></button>
+
+</div>
+</div>
+
+</body>
+</html>

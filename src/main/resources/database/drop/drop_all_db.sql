@@ -1,0 +1,11 @@
+drop table if exists table_order_to_product cascade;
+drop table if exists table_user cascade;
+drop table if exists table_add_descr cascade;
+drop table if exists table_cake_part cascade;
+drop table if exists table_custom_cake cascade;
+drop table if exists table_part_cake_to_bonus cascade;
+drop table if exists table_bonus cascade;
+drop table if exists table_product cascade;
+drop table if exists table_product_to_bonus cascade;
+drop table if exists table_order cascade;
+drop table if exists table_order_to_custom_cake cascade;

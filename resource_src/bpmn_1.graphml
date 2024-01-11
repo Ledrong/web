@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by yFiles for HTML 2.5.0.2-->
+<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/2.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:demostyle2="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/2.0" xmlns:demostyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/1.0" xmlns:icon-style="http://www.yworks.com/yed-live/icon-style/1.0" xmlns:bpmn="http://www.yworks.com/xml/yfiles-bpmn/2.0" xmlns:demotablestyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoTableStyle/1.0" xmlns:uml="http://www.yworks.com/yFilesHTML/demos/UMLDemoStyle/1.0" xmlns:GraphvizNodeStyle="http://www.yworks.com/yFilesHTML/graphviz-node-style/1.0" xmlns:VuejsNodeStyle="http://www.yworks.com/demos/yfiles-vuejs-node-style/1.0" xmlns:explorer-style="http://www.yworks.com/data-explorer/1.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/3.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/3.0" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/2.0/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<key id="d0" for="node" attr.type="int" attr.name="zOrder" y:attr.uri="http://www.yworks.com/xml/yfiles-z-order/1.0/zOrder"/>
+	<key id="d1" for="node" attr.type="boolean" attr.name="Expanded" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded">
+		<default>true</default>
+	</key>
+	<key id="d2" for="node" attr.type="string" attr.name="url"/>
+	<key id="d3" for="node" attr.type="string" attr.name="description"/>
+	<key id="d4" for="node" attr.name="NodeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeLabels"/>
+	<key id="d5" for="node" attr.name="NodeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeGeometry"/>
+	<key id="d6" for="all" attr.name="UserTags" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/UserTags"/>
+	<key id="d7" for="node" attr.name="NodeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeStyle"/>
+	<key id="d8" for="node" attr.name="NodeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/NodeViewState"/>
+	<key id="d9" for="edge" attr.type="string" attr.name="url"/>
+	<key id="d10" for="edge" attr.type="string" attr.name="description"/>
+	<key id="d11" for="edge" attr.name="EdgeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeLabels"/>
+	<key id="d12" for="edge" attr.name="EdgeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeGeometry"/>
+	<key id="d13" for="edge" attr.name="EdgeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeStyle"/>
+	<key id="d14" for="edge" attr.name="EdgeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/EdgeViewState"/>
+	<key id="d15" for="port" attr.name="PortLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLabels"/>
+	<key id="d16" for="port" attr.name="PortLocationParameter" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLocationParameter">
+		<default>
+			<x:Static Member="y:FreeNodePortLocationModel.NodeCenterAnchored"/>
+		</default>
+	</key>
+	<key id="d17" for="port" attr.name="PortStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortStyle">
+		<default>
+			<x:Static Member="y:VoidPortStyle.Instance"/>
+		</default>
+	</key>
+	<key id="d18" for="port" attr.name="PortViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/PortViewState"/>
+	<key id="d19" attr.name="SharedData" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/SharedData"/>
+	<data key="d19">
+		<y:SharedData>
+			<yjs:DefaultLabelStyle x:Key="1" verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="{y:GraphMLReference 3}" textFill="BLACK"/>
+			<bpmn:AlternatingLeafStripeStyle x:Key="2">
+				<bpmn:AlternatingLeafStripeStyle.evenLeafDescriptor>
+					<bpmn:StripeDescriptor backgroundFill="#FFC4D7ED" insetFill="#FFE0E0E0"/>
+				</bpmn:AlternatingLeafStripeStyle.evenLeafDescriptor>
+				<bpmn:AlternatingLeafStripeStyle.parentDescriptor>
+					<bpmn:StripeDescriptor backgroundFill="#FF7192B2" insetFill="#FFE0E0E0"/>
+				</bpmn:AlternatingLeafStripeStyle.parentDescriptor>
+				<bpmn:AlternatingLeafStripeStyle.oddLeafDescriptor>
+					<bpmn:StripeDescriptor backgroundFill="#FFABC8E2" insetFill="#FFE0E0E0"/>
+				</bpmn:AlternatingLeafStripeStyle.oddLeafDescriptor>
+			</bpmn:AlternatingLeafStripeStyle>
+			<yjs:Font x:Key="3" fontSize="12" fontFamily="'Arial'"/>
+			<yjs:Stroke x:Key="4" fill="#FFFFFFFF"/>
+			<yjs:PolylineEdgeStyle x:Key="5" stroke="{y:GraphMLReference 4}">
+				<yjs:PolylineEdgeStyle.targetArrow>
+					<yjs:Arrow type="TRIANGLE" scale="0.75" stroke="{y:GraphMLReference 4}" fill="#FFFFFFFF" cropLength="1"/>
+				</yjs:PolylineEdgeStyle.targetArrow>
+			</yjs:PolylineEdgeStyle>
+			<bpmn:BpmnEdgeStyle x:Key="6" color="WHITE" innerColor="BLACK"/>
+			<y:SmartEdgeLabelModel x:Key="7"/>
+		</y:SharedData>
+	</data>
+	<graph id="G" edgedefault="directed">
+		<data key="d6">
+			<y:Json>{"version":"2.0.0","__mg":"yed-live","theme":{"name":"light","version":"1.0.0"},"layout":"layout-polyline-edge-router","config":{"p_strategy":0,"p_minimumEdgeToEdgeDistance":3,"p_minimumNodeToEdgeDistance":10,"p_routingStyle":0,"p_considerNodeLabels":false,"p_edgeLabeling":false}}</y:Json>
+		</data>
+		<node id="n0">
+			<data key="d0">1</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{x:Static bpmn:PoolHeaderLabelModel.WEST}">
+						<y:Label.Text><![CDATA[Заказ товара]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle textFill="BLACK">
+								<yjs:DefaultLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+								</yjs:DefaultLabelStyle.font>
+							</yjs:DefaultLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="434.375" Y="-1011.375" Width="2928.75" Height="546.625"/>
+			</data>
+			<data key="d7">
+				<bpmn:PoolNodeStyle>
+					<yjs:TableNodeStyle tableRenderingOrder="ROWS_FIRST">
+						<yjs:TableNodeStyle.backgroundStyle>
+							<yjs:ShapeNodeStyle fill="#FFE0E0E0"/>
+						</yjs:TableNodeStyle.backgroundStyle>
+						<yjs:TableNodeStyle.table>
+							<y:Table Insets="20,0,0,0">
+								<y:Table.Rows>
+									<y:Row MinimumSize="50" Size="256.125" Insets="20,0,0,0" Style="{y:GraphMLReference 2}">
+										<y:Row.Labels>
+											<y:Label LayoutParameter="{x:Static y:StretchStripeLabelModel.West}" Style="{y:GraphMLReference 1}">
+												<y:Label.Text><![CDATA[Серверная часть]]></y:Label.Text>
+											</y:Label>
+										</y:Row.Labels>
+									</y:Row>
+									<y:Row MinimumSize="50" Size="290.5" Insets="20,0,0,0" Style="{y:GraphMLReference 2}">
+										<y:Row.Labels>
+											<y:Label LayoutParameter="{x:Static y:StretchStripeLabelModel.West}" Style="{y:GraphMLReference 1}">
+												<y:Label.Text>Клиент</y:Label.Text>
+											</y:Label>
+										</y:Row.Labels>
+									</y:Row>
+								</y:Table.Rows>
+								<y:Table.Columns>
+									<y:Column Style="{x:Static y:VoidStripeStyle.Instance}" MinimumSize="10" Size="2888.75"/>
+								</y:Table.Columns>
+								<y:Table.RowDefaults>
+									<y:StripeDefaults Insets="20,0,0,0" Size="95" MinimumSize="50" Style="{y:GraphMLReference 2}">
+										<y:StripeDefaults.Labels>
+											<y:LabelDefaults AutoAdjustPreferredSize="true" ShareLayoutParameterInstance="true" LayoutParameter="{x:Static y:StretchStripeLabelModel.West}" Style="{y:GraphMLReference 1}" ShareStyleInstance="true"/>
+										</y:StripeDefaults.Labels>
+									</y:StripeDefaults>
+								</y:Table.RowDefaults>
+								<y:Table.ColumnDefaults>
+									<y:StripeDefaults Style="{x:Static y:VoidStripeStyle.Instance}">
+										<y:StripeDefaults.Labels>
+											<y:LabelDefaults AutoAdjustPreferredSize="true" ShareLayoutParameterInstance="true" LayoutParameter="{x:Static y:StretchStripeLabelModel.North}" ShareStyleInstance="true">
+												<y:LabelDefaults.Style>
+													<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="{y:GraphMLReference 3}" textFill="BLACK"/>
+												</y:LabelDefaults.Style>
+											</y:LabelDefaults>
+										</y:StripeDefaults.Labels>
+									</y:StripeDefaults>
+								</y:Table.ColumnDefaults>
+							</y:Table>
+						</yjs:TableNodeStyle.table>
+					</yjs:TableNodeStyle>
+				</bpmn:PoolNodeStyle>
+			</data>
+			<graph id="n0:" edgedefault="directed">
+				<node id="n0::n0">
+					<data key="d0">1</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[переход на главную страницу сайта]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="504.5" Y="-639" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n1">
+					<data key="d0">2</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[запрос списка товаров для каталога, торта в бд]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="879.75" Y="-930" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.8446153846153847"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.5907692307692308"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.23183856502242153,0"/>
+						</data>
+					</port>
+					<port name="p4">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.6237668161434977,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n2">
+					<data key="d0">6</data>
+					<data key="d5">
+						<y:RectD X="1087" Y="-907" Width="50" Height="50"/>
+					</data>
+					<data key="d7">
+						<bpmn:GatewayNodeStyle type="EXCLUSIVE_WITH_MARKER" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.5,1"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.8715625,0.3715625"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n3">
+					<data key="d0">7</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[добавление товаров в корзину]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="1639.9375" Y="-650.4375" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.553076923076923"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.5384615384615384"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n4">
+					<data key="d0">8</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[данные не находятся в кеше или пришло время обновлять кеш]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="709.75" Y="-929.25" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.8353846153846154"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n5">
+					<data key="d0">9</data>
+					<data key="d5">
+						<y:RectD X="808" Y="-861" Width="30" Height="30"/>
+					</data>
+					<data key="d7">
+						<bpmn:EventNodeStyle type="ERROR" characteristic="SUB_PROCESS_INTERRUPTING" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.8702364646048182,0.8333333333333334"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n6">
+					<data key="d0">10</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[клиент нажал кнопку авторизации]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="1131.9375" Y="-645.9375" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5426923076923077"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.7238461538461538"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.32567264573991034,0"/>
+						</data>
+					</port>
+					<port name="p4">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.7608744394618834,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n7">
+					<data key="d0">11</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[авторизация клиента]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="1311.9375" Y="-919.9375" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.7713461538461538"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.5,1"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n8">
+					<data key="d0">12</data>
+					<data key="d5">
+						<y:RectD X="1220" Y="-580.75" Width="30" Height="30"/>
+					</data>
+					<data key="d7">
+						<bpmn:EventNodeStyle type="ERROR" characteristic="SUB_PROCESS_INTERRUPTING" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.8161972830428188,0.884375"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n9">
+					<data key="d0">13</data>
+					<data key="d5">
+						<y:RectD X="1524.25" Y="-630.5" Width="50" Height="50"/>
+					</data>
+					<data key="d7">
+						<bpmn:GatewayNodeStyle type="EXCLUSIVE_WITH_MARKER" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.3675,0.8675"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.5,1"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.5"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n10">
+					<data key="d0">14</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[оформление заказа]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="1854.1875" Y="-644.1875" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.46153846153846156"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.813076923076923"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n11">
+					<data key="d0">15</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[создание записи с заказом в бд]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="2864.6875" Y="-906.9375" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.666923076923077"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.4907692307692308"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n12">
+					<data key="d0">16</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[отправка сообщения на почту, принимающую заказы]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="3042.4375" Y="-908.4375" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5092307692307693"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.51"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n13">
+					<data key="d0">17</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[проверка запроса на ошибки]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="2010.1875" Y="-903.1875" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.8053846153846154"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n14">
+					<data key="d0">18</data>
+					<data key="d5">
+						<y:RectD X="2109.25" Y="-836.5" Width="30" Height="30"/>
+					</data>
+					<data key="d7">
+						<bpmn:EventNodeStyle type="ERROR" characteristic="SUB_PROCESS_INTERRUPTING" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.8464975401266505,0.859375"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n15">
+					<data key="d0">19</data>
+					<data key="d5">
+						<y:RectD X="2198.75" Y="-819" Width="30" Height="30"/>
+					</data>
+					<data key="d7">
+						<bpmn:EventNodeStyle type="MESSAGE" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.0552154074604914,0.2760416666666667"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.8943011669157386,0.8041666666666667"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n16">
+					<data key="d0">20</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[пользователь авторизован]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="2322.1875" Y="-904.1875" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.8176923076923077"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.8211538461538461"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n17">
+					<data key="d0">21</data>
+					<data key="d4">
+						<x:List>
+							<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
+								<y:Label.Text><![CDATA[применение спец скидок и предложений]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" wrapping="WORD" clipText="false" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d5">
+						<y:RectD X="2533.4375" Y="-905.4375" Width="139.375" Height="81.25"/>
+					</data>
+					<data key="d7">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0"/>
+					<port name="p1"/>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.8365384615384616"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.6484615384615384"/>
+						</data>
+					</port>
+					<port name="p4">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.27802690582959644,0"/>
+						</data>
+					</port>
+					<port name="p5">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.6932735426008969,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n18">
+					<data key="d0">22</data>
+					<data key="d5">
+						<y:RectD X="2410.25" Y="-837.75" Width="30" Height="30"/>
+					</data>
+					<data key="d7">
+						<bpmn:EventNodeStyle type="ERROR" characteristic="SUB_PROCESS_INTERRUPTING" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.8414474972793414,0.8635416666666667"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n19">
+					<data key="d0">23</data>
+					<data key="d5">
+						<y:RectD X="2757.5" Y="-877.75" Width="50" Height="50"/>
+					</data>
+					<data key="d7">
+						<bpmn:GatewayNodeStyle type="EXCLUSIVE_WITH_MARKER" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.5,1"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.5"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n20">
+					<data key="d0">24</data>
+					<data key="d5">
+						<y:RectD X="3255.5" Y="-882" Width="30" Height="30"/>
+					</data>
+					<data key="d7">
+						<bpmn:EventNodeStyle type="MESSAGE" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="1,0.5"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n21">
+					<data key="d0">25</data>
+					<data key="d5">
+						<y:RectD X="3298.9375" Y="-593.125" Width="30" Height="30"/>
+					</data>
+					<data key="d7">
+						<bpmn:EventNodeStyle minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0,0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.3,0.04221125406288972"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d16">
+							<y:FreeNodePortLocationModelParameter Ratio="0.7,0.04221125406288972"/>
+						</data>
+					</port>
+				</node>
+				<edge id="n0::e0" source="n0::n0" target="n0::n4" sourceport="p0" targetport="p2">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="574.1875,-888.625"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e1" source="n0::n8" target="n0::n9" sourceport="p0" targetport="p1">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="1549.25,-554.21875"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e2" source="n0::n4" target="n0::n1" sourceport="p1" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e3" source="n0::n5" target="n0::n2" sourceport="p0" targetport="p0">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="1112,-836"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e4" source="n0::n1" target="n0::n2" sourceport="p2" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e5" source="n0::n9" target="n0::n3" sourceport="p2" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e6" source="n0::n3" target="n0::n10" sourceport="p2" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e7" source="n0::n14" target="n0::n15" sourceport="p0" targetport="p0">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e8" source="n0::n13" target="n0::n16" sourceport="p1" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e9" source="n0::n18" target="n0::n19" sourceport="p0" targetport="p0">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="2782.5,-811.84375"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e10" source="n0::n16" target="n0::n17" sourceport="p2" targetport="p2">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e11" source="n0::n17" target="n0::n19" sourceport="p3" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e12" source="n0::n19" target="n0::n11" sourceport="p2" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e13" source="n0::n11" target="n0::n12" sourceport="p2" targetport="p1">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e14" source="n0::n12" target="n0::n20" sourceport="p2" targetport="p0">
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="5"/>
+					</data>
+				</edge>
+				<edge id="n0::e15" source="n0::n2" target="n0::n6" sourceport="p2" targetport="p3">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="1177.328125,-888.421875"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="6"/>
+					</data>
+				</edge>
+				<edge id="n0::e16" source="n0::n6" target="n0::n7" sourceport="p4" targetport="p1">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="1237.984375,-857.265625"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="6"/>
+					</data>
+				</edge>
+				<edge id="n0::e17" source="n0::n7" target="n0::n9" sourceport="p2" targetport="p3">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="1381.625,-605.5"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="6"/>
+					</data>
+				</edge>
+				<edge id="n0::e18" source="n0::n10" target="n0::n13" sourceport="p3" targetport="p2">
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="1923.875,-862.5625"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="6"/>
+					</data>
+				</edge>
+				<edge id="n0::e19" source="n0::n15" target="n0::n21" sourceport="p1" targetport="p1">
+					<data key="d11">
+						<x:List>
+							<y:Label>
+								<y:Label.Text><![CDATA[При формировании заказа произошла ошибка, пожалуйста, оформите его еще раз]]></y:Label.Text>
+								<y:Label.LayoutParameter>
+									<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 7}" Distance="5"/>
+								</y:Label.LayoutParameter>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="3307.9375,-794.875"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="6"/>
+					</data>
+				</edge>
+				<edge id="n0::e20" source="n0::n20" target="n0::n21" sourceport="p1" targetport="p2">
+					<data key="d11">
+						<x:List>
+							<y:Label>
+								<y:Label.Text><![CDATA[Заказ успешно оформлен. Ожидайте звонка]]></y:Label.Text>
+								<y:Label.LayoutParameter>
+									<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 7}" Location="FromTarget" SegmentRatio="0.15239887111947314" Distance="-9.015624999999943"/>
+								</y:Label.LayoutParameter>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textFill="BLACK">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="12" fontFamily="'Roboto'"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d12">
+						<x:List>
+							<y:Bend Location="3319.9375,-867"/>
+						</x:List>
+					</data>
+					<data key="d13">
+						<y:GraphMLReference ResourceKey="6"/>
+					</data>
+				</edge>
+			</graph>
+		</node>
+		<node id="n1">
+			<data key="d0">2</data>
+			<data key="d5">
+				<y:RectD X="881.75" Y="-1123" Width="115.25" Height="73"/>
+			</data>
+			<data key="d7">
+				<bpmn:DataStoreNodeStyle minimumSize="30,20"/>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.26301518438177873,0.957030629993123"/>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.7369848156182213,0.957030629993123"/>
+				</data>
+			</port>
+		</node>
+		<node id="n2">
+			<data key="d0">3</data>
+			<data key="d5">
+				<y:RectD X="2540.25" Y="-1110.25" Width="121.75" Height="69.75"/>
+			</data>
+			<data key="d7">
+				<bpmn:DataStoreNodeStyle minimumSize="30,20"/>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.26232032854209447,0.9569543653277895"/>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.7376796714579056,0.9569543653277895"/>
+				</data>
+			</port>
+		</node>
+		<edge id="e0" source="n0::n17" target="n2" sourceport="p4" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="5"/>
+			</data>
+		</edge>
+		<edge id="e1" source="n2" target="n0::n17" sourceport="p1" targetport="p5">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="5"/>
+			</data>
+		</edge>
+		<edge id="e2" source="n0::n1" target="n1" sourceport="p3" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="5"/>
+			</data>
+		</edge>
+		<edge id="e3" source="n1" target="n0::n1" sourceport="p1" targetport="p4">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="5"/>
+			</data>
+		</edge>
+	</graph>
+</graphml>

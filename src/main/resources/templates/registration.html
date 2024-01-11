@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+    <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="main-logo">
+
+<div class="bg-shadow">
+
+<div class="container orange-bg">
+
+<h1 class="title-style main-title">Страница регистрации</h1>
+<form class="default-text default-form" th:action="@{/registration}" method="post"
+      th:object="${newUserDto}">
+    <label for="login">Логин:</label>
+    <input type="text" id="login" name="login" required />
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required />
+
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" th:field="${newUserDto.name}" required />
+
+    <label for="surname">Фамилия:</label>
+    <input type="text" id="surname" name="surname" th:field="${newUserDto.surname}" required />
+
+    <label for="lastname">Отчество:</label>
+    <input type="text" id="lastname" name="lastname" th:field="${newUserDto.lastname}" required />
+
+    <label for="address">Адрес:</label>
+    <input type="text" id="address" name="address" th:field="${newUserDto.address}" required />
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" th:field="${newUserDto.email}" required />
+
+    <p th:if="${textError != null}">При регистрации произошла ошибка: <span th:text="${textError}"></span></p>
+
+    <button class="default-button default-text" type="submit">Зарегистрироваться</button>
+</form>
+
+</div>
+</div>
+
+</body>
+</html>

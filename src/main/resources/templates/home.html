@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="main-logo">
+
+<div class="bg-shadow">
+
+<div class="container orange-bg">
+
+
+<h1 class="title-style main-title">Вы на главной странице!</h1>
+<h2 class="title-style">Личный кабинет</h2>
+<div class="main-page-account" th:if="${responseData.user == null}">
+    <p class="default-text main-page-account-title">Пользователь неавторизован!</p>
+    <div class="main-page-account-buttons">
+        <button class="default-text default-button"><a th:href="@{/registration}">Регистрация</a></button>
+        <button class="default-text default-button"><a th:href="@{/login}">Авторизация</a></button>
+    </div>
+</div>
+<div class="main-page-account" th:if="${responseData.user != null}">
+<div class="main-page-account-user-data">
+    <p class="default-text">Имя: <span th:text="${responseData.user.name}"></span></p>
+    <p class="default-text">Фамилия: <span th:text="${responseData.user.surname}"></span></p>
+    <p class="default-text">Отчество: <span th:text="${responseData.user.lastname}"></span></p>
+    <p class="default-text">Почта: <span th:text="${responseData.user.getEmail()}"></span></p>
+    <p class="default-text">Адрес: <span th:text="${responseData.user.getAddress()}"></span></p>
+</div>
+<div class="main-page-account-buttons">
+    <button class="default-text default-button"><a th:href="@{/account}">В личный кабинет</a></button>
+    <button class="default-text default-button"><a th:href="@{/logout}">Выйти</a></button>
+</div>
+</div>
+
+<h2 class="title-style">Каталог с товарами</h2>
+<div class="products-catalog" th:if="${responseData.products.isEmpty()}">
+    <p class="default-text">Здесь пока пусто!</p>
+</div>
+<div class="products-catalog" th:if="${!responseData.products.isEmpty()}">
+    <div class="products-catalog-cart" th:id="'product-catalog-'+ ${product.id}" th:each="product: ${responseData.products}">
+        <img class="products-catalog-cart-img" th:src="'/img/products/' + ${product.urlImg}" alt="картинка продукта">
+        <p class="default-text  black-text"><span th:id="'product-catalog-' + ${product.id} + '-name'" th:text="${product.name}"></span></p>
+        <p class="default-text black-text"><span th:id="'product-catalog-' + ${product.id} + '-cost'" th:text="${product.cost}"></span> Р.</p>
+<!--        <p>Идентификатор продукта: <span th:text="${product.id}"></span></p>-->
+        <div th:id="'add-info-product-' + ${product.id}" style="display: none">
+<!--            <p>Заголовок в описании: <span th:text="${product.description.title}" ></span></p>-->
+<!--            <p>Доп. текст в описании: <span th:text="${product.description.description}"></span></p>-->
+<!--            <p>Url картинки для описания: <span th:text="${product.description.urlImg}"></span></p>-->
+            <p class="default-text black-text">Кол-во углеводов: <span th:text="${product.description.amountCarb}"></span></p>
+            <p class="default-text black-text">Кол-во жиров: <span th:text="${product.description.amountFat}"></span></p>
+            <p class="default-text black-text">Кол-во белков: <span th:text="${product.description.amountPrt}"></span></p>
+            <p class="default-text black-text">Срок хранения (в днях): <span th:text="${product.description.expiryTimeDays}"></span></p>
+        </div>
+        <div>
+            <button class="default-text default-button" th:id="'button-toggle-product-' + ${product.getId()}" th:onclick="'toggleVisibility(\'add-info-product-' + ${product.id} + '\')'">Развернуть/Скрыть описание</button>
+            <button class="default-text default-button" th:if="${responseData.user != null}" th:id="'button-add-product-' + ${product.id}" th:onclick="'addProductToCard(\'' + ${product.id} + '\')'">Добавить в корзину</button>
+        </div>
+    </div>
+</div>
+
+<h2 class="title-style">Конструктор торта</h2>
+<div class="builder-cake-container-empty" th:if="${responseData.cakesParts.bases.isEmpty() || responseData.cakesParts.fillings.isEmpty() || responseData.cakesParts.creams.isEmpty()}">
+    <p class="default-text">Здесь пока пусто!</p>
+</div>
+
+<div class="builder-cake-container" th:if="${!(responseData.cakesParts.bases.isEmpty() || responseData.cakesParts.fillings.isEmpty() ||
+responseData.cakesParts.creams.isEmpty())}">
+    <div class="default-text">Основа: <select id="cake-select-base">
+        <option th:each="base: ${responseData.cakesParts.bases}" th:id="${base.id}">
+            Имя: <span th:text="${base.name}" th:id="'cake-base-' + ${base.id} + '-name'"></span>
+            Стоимость: <span th:text="${base.cost}" th:id="'cake-base-' + ${base.id} + '-cost'"></span>
+        </option>
+    </select>
+    </div>
+
+    <div class="default-text">Начинка: <select id="cake-select-filling">
+        <option th:each="filling: ${responseData.cakesParts.fillings}" th:id="${filling.id}">
+            Имя: <span th:text="${filling.name}" th:id="'cake-filling-' + ${filling.id} + '-name'"></span>
+            Стоимость: <span th:text="${filling.cost}" th:id="'cake-filling-' + ${filling.id} + '-cost'"></span>
+        </option>
+    </select>
+    </div>
+
+    <div class="default-text">Крем: <select id="cake-select-cream">
+        <option th:each="cream: ${responseData.cakesParts.creams}" th:id="${cream.id}">
+            Имя: <span th:text="${cream.name}" th:id="'cake-cream-' + ${cream.id} + '-name'"></span>
+            Стоимость: <span th:text="${cream.cost}" th:id="'cake-cream-' + ${cream.id} + '-cost'"></span>
+        </option>
+    </select>
+    </div>
+
+    <button class="default-button default-text" th:id="'button-add-сake'" th:if="${responseData.user != null}" th:onclick="'addCakeToCart()'">Добавить в корзину</button>
+</div>
+
+<div class="product-cart" th:if="${responseData.user != null}" id="cart">
+    <h2 class="default-text product-cart-title">Корзина</h2>
+    <ul class="default-text" id="cart-items">
+        <!-- Здесь будут отображаться добавленные товары -->
+    </ul>
+    <p class="default-text product-cart-total">Итого:<span id="cart-total">0</span> P.</p>
+    <form th:if="${responseData.user != null}" method="post" th:action="@{/order}">
+        <input type="hidden"  id="hidden-order-data" name="dataCart" value="">
+        <button class="default-button default-text product-cart-button" type="submit"  onclick="createOrder()">Оформить заказ</button>
+    </form>
+</div>
+
+</div>
+</div>
+
+</body>
+
+<script>
+function createOrder() {
+    var dataCart = {
+        productData: products,
+        cakesData: cakes
+    };
+
+    document.getElementById('hidden-order-data').value = JSON.stringify(dataCart)
+}
+</script>
+
+<script>
+    const cartItems = document.querySelector('#cart-items');
+    const cartTotal = document.querySelector('#cart-total');
+
+    let products = [];
+    let cakes = [];
+
+    function updateCartTotal() {
+        const totalProducts = products.reduce((sum, item) => sum + item.cost, 0);
+        cartTotal.textContent = totalProducts;
+    }
+
+    // Функция для отрисовки списка добавленных товаров
+    function renderCartItems() {
+        cartItems.innerHTML = '';
+        products.forEach((item) => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - ${item.cost} руб.`;
+            cartItems.appendChild(li);
+        });
+        cakes.forEach((item) => {
+            const li = document.createElement('li');
+            li.textContent = `Кастомный торт. Идентификаторы частей (${item.baseId}, ${item.fillingId}, ${item.creamId})`;
+            cartItems.appendChild(li);
+        });
+    }
+
+    function addProductToCard(elementId) {
+        const nameProduct = document.getElementById('product-catalog-' + elementId + '-name');
+        const costProduct = document.getElementById('product-catalog-' + elementId + '-cost');
+
+        const name = nameProduct.innerText;
+        const cost = parseFloat(costProduct.innerText);
+        const intId = parseInt(elementId);
+
+        // Добавляем товар в массив и обновляем корзину
+        if (intId && name && cost) {
+            products.push({ intId, name, cost });
+            updateCartTotal();
+            renderCartItems();
+        }
+    }
+
+    function addCakeToCart() {
+        const selectBase = document.getElementById('cake-select-base');
+        const selectFilling = document.getElementById('cake-select-filling');
+        const selectCream = document.getElementById('cake-select-cream');
+
+        const baseId = parseInt(selectBase.options[selectBase.selectedIndex].id)
+        const fillingId = parseInt(selectFilling.options[selectFilling.selectedIndex].id)
+        const creamId = parseInt(selectCream.options[selectCream.selectedIndex].id)
+
+        if (baseId && fillingId && creamId) {
+            cakes.push({ baseId, fillingId, creamId });
+            updateCartTotal();
+            renderCartItems();
+        }
+    }
+</script>
+
+<script>
+    function toggleVisibility(elementId) {
+        var element = document.getElementById(elementId);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
+
+</html>

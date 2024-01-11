@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница создания заказа</title>
+    <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="main-logo">
+
+<div class="bg-shadow">
+
+<div class="container orange-bg">
+
+
+<h1 class="title-style main-title">Страница создания заказа</h1>
+
+<p class="default-text">Идентификатор заказа: <span th:text="${orderData.id}"></span></p>
+
+<div class="default-text">
+    <h2 class="title-style">Информация о заказчике</h2>
+    <p class="default-text">Имя: <span th:text="${user.name}"></span></p>
+    <p class="default-text">Фамилия: <span th:text="${user.surname}"></span></p>
+    <p class="default-text">Отчество: <span th:text="${user.lastname}"></span></p>
+    <p class="default-text">Почта: <span th:text="${user.getEmail()}"></span></p>
+    <p class="default-text">Адрес: <span th:text="${user.getAddress()}"></span></p>
+</div>
+
+<h2 class="title-style">Информация о заказе</h2>
+<h3 class="default-text">Продукты из каталога:</h3>
+<div class="default-text" th:if="${!orderData.products.isEmpty()}" th:each="product: ${orderData.products}">
+    <div th:id="'product-catalog-'+ ${product.id}">
+        <p>Название продукта: <span th:id="'product-catalog-' + ${product.id} + '-name'" th:text="${product.name}"></span></p>
+        <p>Стоимость продукта: <span th:id="'product-catalog-' + ${product.id} + '-cost'" th:text="${product.cost}"></span></p>
+        <p>Идентификатор продукта: <span th:text="${product.id}"></span></p>
+    </div>
+</div>
+<h3 class="default-text">Торты:</h3>
+<div class="default-text" th:if="${!orderData.cakes.isEmpty()}" th:each="cake: ${orderData.cakes}">
+    <div>
+        <p>Основа торта: <span th:text="${cake.base.name}"></span></p>
+        <p>Начинка торта: <span th:text="${cake.filling.name}"></span></p>
+        <p>Крем торта: <span th:text="${cake.cream.name}"></span></p>
+        <p>Общая стоимость торта: <span th:text="${cake.getTotalCost()}"></span></p>
+    </div>
+</div>
+
+<p th:if="${errorText != null}"><span th:text="${errorText}"></span></p>
+
+<form th:action="@{/order/create}" method="post">
+    <button class="default-button default-text" type="submit">Создать заказ</button>
+</form>
+
+<button class="default-button default-text"><a th:href="@{/index}">Вернуться на главную страницу</a></button>
+
+</div>
+</div>
+
+</body>
+</html>

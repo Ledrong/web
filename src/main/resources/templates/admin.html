@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+</head>
+<body>
+
+<h1>Панель администрирования</h1>
+
+<h2>Подукты каталога из базы данных</h2>
+<table>
+    <thead>
+    <tr>
+        <th>id |</th>
+        <th>Наименование |</th>
+        <th>Цена |</th>
+        <th>url Картинки |</th>
+        <th>Заголовок описания |</th>
+        <th>Текст описания |</th>
+        <th>Url картинки описания |</th>
+        <th>Кол-во углеводов |</th>
+        <th>Кол-во белков |</th>
+        <th>Кол-во жиров |</th>
+        <th>Срок годности |</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product: ${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.cost}"></td>
+        <td th:text="${product.urlImg}"></td>
+        <td th:text="${product.description.title}"></td>
+        <td th:text="${product.description.description}"></td>
+        <td th:text="${product.description.urlImg}"></td>
+        <td th:text="${product.description.amountCarb}"></td>
+        <td th:text="${product.description.amountPrt}"></td>
+        <td th:text="${product.description.amountFat}"></td>
+        <td th:text="${product.description.expiryTimeDays}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Добавить в базу новый продукт</h2>
+<form th:action="@{/admin/createProduct}" method="post" th:object="${newProduct}">
+    <label for="nameProduct">Наименование товара:</label>
+    <input type="text" id="nameProduct" name="nameProduct" th:field="${newProduct.name}" required />
+
+    <label for="costProduct">Цена товара:</label>
+    <input type="text" id="costProduct" name="costProduct" th:field="${newProduct.cost}" required />
+
+    <label for="urlProduct">Url картинки товара:</label>
+    <input type="text" id="urlProduct" name="urlProduct" th:field="${newProduct.urlImg}" required />
+
+    <button  type="submit">Создать</button>
+</form>
+
+<h2>Удалить из базы существующий продукт каталога</h2>
+<form th:action="@{/admin/deleteProduct}" method="post">
+    <label for="idProduct">Id продукта:</label>
+    <input type="text" id="idProduct" name="idProduct" required />
+    <button  type="submit">Удалить</button>
+</form>
+
+
+<h2>Используемые основы тортов из базы данных</h2>
+<table>
+    <thead>
+    <tr>
+        <th>id |</th>
+        <th>Наименование |</th>
+        <th>Цена |</th>
+        <th>Заголовок описания |</th>
+        <th>Текст описания |</th>
+        <th>Url картинки описания |</th>
+        <th>Кол-во углеводов |</th>
+        <th>Кол-во белков |</th>
+        <th>Кол-во жиров |</th>
+        <th>Срок годности |</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="base: ${baseParts}">
+        <td th:text="${base.id}"></td>
+        <td th:text="${base.name}"></td>
+        <td th:text="${base.cost}"></td>
+        <td th:text="${base.description.title}"></td>
+        <td th:text="${base.description.description}"></td>
+        <td th:text="${base.description.urlImg}"></td>
+        <td th:text="${base.description.amountCarb}"></td>
+        <td th:text="${base.description.amountPrt}"></td>
+        <td th:text="${base.description.amountFat}"></td>
+        <td th:text="${base.description.expiryTimeDays}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Используемые начинки тортов из базы данных</h2>
+<table>
+    <thead>
+    <tr>
+        <th>id |</th>
+        <th>Наименование |</th>
+        <th>Цена |</th>
+        <th>Заголовок описания |</th>
+        <th>Текст описания |</th>
+        <th>Url картинки описания |</th>
+        <th>Кол-во углеводов |</th>
+        <th>Кол-во белков |</th>
+        <th>Кол-во жиров |</th>
+        <th>Срок годности |</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="filling: ${fillingParts}">
+        <td th:text="${filling.id}"></td>
+        <td th:text="${filling.name}"></td>
+        <td th:text="${filling.cost}"></td>
+        <td th:text="${filling.description.title}"></td>
+        <td th:text="${filling.description.description}"></td>
+        <td th:text="${filling.description.urlImg}"></td>
+        <td th:text="${filling.description.amountCarb}"></td>
+        <td th:text="${filling.description.amountPrt}"></td>
+        <td th:text="${filling.description.amountFat}"></td>
+        <td th:text="${filling.description.expiryTimeDays}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Используемые крема тортов из базы данных</h2>
+<table>
+    <thead>
+    <tr>
+        <th>id |</th>
+        <th>Наименование |</th>
+        <th>Цена |</th>
+        <th>Заголовок описания |</th>
+        <th>Текст описания |</th>
+        <th>Url картинки описания |</th>
+        <th>Кол-во углеводов |</th>
+        <th>Кол-во белков |</th>
+        <th>Кол-во жиров |</th>
+        <th>Срок годности |</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cream: ${creamParts}">
+        <td th:text="${cream.id}"></td>
+        <td th:text="${cream.name}"></td>
+        <td th:text="${cream.cost}"></td>
+        <td th:text="${cream.description.title}"></td>
+        <td th:text="${cream.description.description}"></td>
+        <td th:text="${cream.description.urlImg}"></td>
+        <td th:text="${cream.description.amountCarb}"></td>
+        <td th:text="${cream.description.amountPrt}"></td>
+        <td th:text="${cream.description.amountFat}"></td>
+        <td th:text="${cream.description.expiryTimeDays}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Добавить в базу часть торта</h2>
+<form th:action="@{/admin/addCakePart}" method="post" th:object="${newCakePart}">
+    <label for="namePart">Наименование:</label>
+    <input type="text" id="namePart" name="namePart" th:field="${newCakePart.name}" required />
+
+    <label for="costPart">Цена товара:</label>
+    <input type="text" id="costPart" name="costPart" th:field="${newCakePart.cost}" required />
+
+    <label for="typePart">Тип части (1 - база, 2 - начинка, 3 - крем):</label>
+    <input type="text" id="typePart" name="typePart" th:field="${newCakePart.type}" required />
+
+    <button  type="submit">Создать</button>
+</form>
+
+<h2>Удалить из базы существующую часть торта</h2>
+<form th:action="@{/admin/deleteCakePart}" method="post">
+    <label for="idCakePart">Id части:</label>
+    <input type="text" id="idCakePart" name="idCakePart" required />
+    <button  type="submit">Удалить</button>
+</form>
+
+<h2>Возможные сочетания ингредиетов тортов</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Наименование базы |</th>
+        <th>Наименование начинки |</th>
+        <th>Наименование крема |</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cake: ${cakes}">
+        <td th:text="${cake.base.name}"></td>
+        <td th:text="${cake.filling.name}"></td>
+        <td th:text="${cake.cream.name}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Добавить в базу сочетание ингирдиентов торта</h2>
+<form th:action="@{/admin/addCake}" method="post">
+    <label for="idBasePart">Id основы:</label>
+    <input type="text" id="idBasePart" name="idBasePart" required />
+
+    <label for="idFillingPart">Id начинки:</label>
+    <input type="text" id="idFillingPart" name="idFillingPart" required />
+
+    <label for="idCreamPart">Id крема:</label>
+    <input type="text" id="idCreamPart" name="idCreamPart" required />
+
+    <button  type="submit">Создать</button>
+</form>
+
+<h2>Удалить из базы существующее сочетание ингирдиентов торта</h2>
+<form th:action="@{/admin/deleteCake}" method="post">
+    <label for="idCake">Id сочетания:</label>
+    <input type="text" id="idCake" name="idCake" required />
+    <button  type="submit">Удалить</button>
+</form>
+
+</body>
+</html>
